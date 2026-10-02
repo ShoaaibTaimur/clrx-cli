@@ -14,9 +14,25 @@ export function formatSafetyLevel(level: SafetyLevel): string {
     case SafetyLevel.CAUTION:
       return chalk.yellow('CAUTION');
     case SafetyLevel.CONFIRMATION_REQUIRED:
-      return chalk.red('CONFIRMATION REQUIRED');
+      return chalk.red('DANGEROUS');
     case SafetyLevel.PROTECTED:
       return chalk.gray('PROTECTED');
+  }
+}
+
+/**
+ * Color-code a safety level badge for terminal selection lists.
+ */
+export function formatSafetyBadge(level: SafetyLevel): string {
+  switch (level) {
+    case SafetyLevel.SAFE:
+      return chalk.green.bold('[SAFE]');
+    case SafetyLevel.CAUTION:
+      return chalk.yellow.bold('[CAUTION]');
+    case SafetyLevel.CONFIRMATION_REQUIRED:
+      return chalk.red.bold('[DANGEROUS]');
+    case SafetyLevel.PROTECTED:
+      return chalk.dim('[PROTECTED]');
   }
 }
 

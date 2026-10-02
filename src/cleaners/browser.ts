@@ -111,7 +111,7 @@ export class BrowserCleaner extends BaseCleaner {
     let failed = 0;
 
     if (!options.quiet) {
-      logger.info('  ℹ Close your browsers before cleaning for best results.');
+      logger.info('  Note: Close your browsers before cleaning for best results.');
     }
 
     for (const { browser, path: bp } of this.browsers) {

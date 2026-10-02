@@ -64,8 +64,8 @@ export class IosBackupsCleaner extends BaseCleaner {
    * They require users to manage them explicitly via iTunes/Finder.
    */
   override async clean(options: CleanOptions): Promise<CleanResult> {
-    logger.info('  ℹ iPhone/iPad backups are NOT automatically deleted.');
-    logger.info('    Manage backups via Finder → Manage Backups or iTunes.');
+    logger.info('  Note: iPhone/iPad backups are not automatically deleted.');
+    logger.info('  Manage backups via Finder or iTunes.');
 
     return {
       cleanerId: this.id,

@@ -77,8 +77,8 @@ export class DownloadsCleaner extends BaseCleaner {
    */
   override async clean(options: CleanOptions): Promise<CleanResult> {
     // Downloads are never auto-cleaned — this is intentional
-    logger.info('  ℹ Downloads require explicit manual review.');
-    logger.info("    Use 'clrx info' to inspect Downloads contents.");
+    logger.info('  Note: Downloads require explicit manual review.');
+    logger.info("  Use 'clrx info' to inspect Downloads contents.");
 
     return {
       cleanerId: this.id,

@@ -1,6 +1,6 @@
 {
   "name": "@shoaaib_taimur/clrx",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Safe, modern macOS storage cleaner CLI",
   "type": "module",
   "main": "./dist/cli.js",

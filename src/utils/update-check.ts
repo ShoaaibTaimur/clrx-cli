@@ -82,19 +82,23 @@ export function isNewer(current: string, remote: string): boolean {
 /**
  * Upgrade @shoaaib_taimur/clrx globally via npm.
  */
-async function performUpgrade(): Promise<void> {
+async function performUpgrade(targetVersion: string): Promise<void> {
   const ora = (await import('ora')).default;
   const spinner = ora({ text: chalk.dim('Upgrading ClrX...'), color: 'cyan' }).start();
 
   try {
-    await execFileAsync('npm', ['install', '-g', '@shoaaib_taimur/clrx']);
-    spinner.succeed(chalk.green('ClrX upgraded successfully! Please re-run clrx.'));
+    await execFileAsync('npm', ['install', '-g', `@shoaaib_taimur/clrx@${targetVersion}`]);
+    spinner.succeed(
+      chalk.green(`ClrX upgraded successfully to v${targetVersion}! Please re-run clrx.`),
+    );
     process.exit(0);
   } catch (err) {
     spinner.fail(chalk.red('Upgrade failed.'));
     const msg = err instanceof Error ? err.message : String(err);
     logger.error(msg);
-    logger.info(chalk.dim('  You can upgrade manually: npm install -g @shoaaib_taimur/clrx'));
+    logger.info(
+      chalk.dim(`  You can upgrade manually: npm install -g @shoaaib_taimur/clrx@latest`),
+    );
   }
 }
 
@@ -155,15 +159,14 @@ export async function checkForUpdates(currentVersion: string): Promise<void> {
     });
 
     if (action === 'upgrade') {
-      await performUpgrade();
+      await performUpgrade(latestVersion);
     } else if (action === 'exit') {
-      console.log(chalk.cyan('\nGoodbye!\n'));
+      console.clear();
       process.exit(0);
     } else {
-      console.log(chalk.dim('  Skipping update. Continuing with current version.\n'));
+      console.clear();
     }
   } catch {
-    // User cancelled prompt — skip silently
-    console.log(chalk.dim('\n  Skipping update.\n'));
+    console.clear();
   }
 }

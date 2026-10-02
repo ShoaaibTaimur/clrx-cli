@@ -106,7 +106,7 @@ export async function runScanCommand(opts: ScanCommandOptions = {}): Promise<voi
     table.push([nameStr, sizeStr, itemStr, safetyStr, statusStr]);
 
     if (result.note) {
-      logger.verbose(`  ↳ ${result.name}: ${result.note}`);
+      logger.verbose(`  - ${result.name}: ${result.note}`);
     }
   }
 

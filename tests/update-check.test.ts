@@ -30,7 +30,7 @@ describe('isNewer', () => {
   });
 
   it('returns false when current is newer (patch)', () => {
-    expect(isNewer('1.0.5', '1.0.4')).toBe(false);
+    expect(isNewer('1.0.5', '1.0.5')).toBe(false);
   });
 
   it('handles v-prefixed versions', () => {

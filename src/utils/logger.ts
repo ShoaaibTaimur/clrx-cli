@@ -32,18 +32,18 @@ const logger = {
 
   /** Warnings — always shown */
   warn(msg: string): void {
-    process.stderr.write(chalk.yellow('⚠ ' + msg) + '\n');
+    process.stderr.write(chalk.yellow(msg) + '\n');
   },
 
   /** Errors — always shown */
   error(msg: string): void {
-    process.stderr.write(chalk.red('✗ ' + msg) + '\n');
+    process.stderr.write(chalk.red(msg) + '\n');
   },
 
   /** Success messages */
   success(msg: string): void {
     if (currentLevel !== 'quiet') {
-      process.stdout.write(chalk.green('✓ ' + msg) + '\n');
+      process.stdout.write(chalk.green(msg) + '\n');
     }
   },
 

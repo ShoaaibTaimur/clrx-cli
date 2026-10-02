@@ -135,7 +135,7 @@ export async function runInfoCommand(): Promise<void> {
 
   for (const tool of tools) {
     const exists = await commandExists(tool.cmd);
-    const status = exists ? chalk.green('✓ Installed') : chalk.dim('Not installed');
+    const status = exists ? chalk.green('Installed') : chalk.dim('Not installed');
     console.log(`  ${tool.name.padEnd(28)} ${status}`);
   }
 
