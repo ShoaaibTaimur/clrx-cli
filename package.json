@@ -1,6 +1,6 @@
 {
   "name": "@shoaaib_taimur/clrx",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Safe, modern macOS storage cleaner CLI",
   "type": "module",
   "main": "./dist/cli.js",
@@ -10,6 +10,14 @@
   "publishConfig": {
     "access": "public"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShoaaibTaimur/clrx-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ShoaaibTaimur/clrx-cli/issues"
+  },
+  "homepage": "https://github.com/ShoaaibTaimur/clrx-cli#readme",
   "files": [
     "dist/**/*.js",
     "!dist/core/registry-test-helper.js",

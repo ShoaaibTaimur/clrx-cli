@@ -2,6 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/@shoaaib_taimur/clrx.svg?color=blue)](https://www.npmjs.com/package/@shoaaib_taimur/clrx)
 [![npm downloads](https://img.shields.io/npm/dt/@shoaaib_taimur/clrx.svg)](https://www.npmjs.com/package/@shoaaib_taimur/clrx)
+[![GitHub](https://img.shields.io/badge/GitHub-ShoaaibTaimur%2Fclrx--cli-181717.svg?logo=github)](https://github.com/ShoaaibTaimur/clrx-cli)
 [![Platform](https://img.shields.io/badge/platform-macOS-lightgrey.svg)](https://www.apple.com/macos/)
 [![Node.js](https://img.shields.io/badge/node-%E2%89%A520-brightgreen.svg)](https://nodejs.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -147,8 +148,8 @@ Displays macOS version, architecture, Node.js version, disk partition usage, det
 
 ```bash
 # Clone and install dependencies
-git clone https://github.com/shoaaibtaimur/clrx.git
-cd clrx
+git clone https://github.com/ShoaaibTaimur/clrx-cli.git
+cd clrx-cli
 npm install
 
 # Run in dev mode (hot execution with tsx)
@@ -171,7 +172,7 @@ npm run typecheck
 ## Links
 
 - **npm Package**: [https://www.npmjs.com/package/@shoaaib_taimur/clrx](https://www.npmjs.com/package/@shoaaib_taimur/clrx)
-- **Repository**: [https://github.com/shoaaibtaimur/clrx](https://github.com/shoaaibtaimur/clrx)
+- **GitHub Repository**: [https://github.com/ShoaaibTaimur/clrx-cli](https://github.com/ShoaaibTaimur/clrx-cli)
 
 ---
 

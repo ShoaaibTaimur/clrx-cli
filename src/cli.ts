@@ -32,7 +32,7 @@ import logger from './utils/logger.js';
 
 // ── Version ──────────────────────────────────────────────────
 const __dirname = dirname(fileURLToPath(import.meta.url));
-let version = '1.0.2';
+let version = '1.0.3';
 try {
   const pkg = JSON.parse(readFileSync(join(__dirname, '..', 'package.json'), 'utf8')) as {
     version: string;
